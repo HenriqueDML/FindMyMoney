@@ -13,11 +13,13 @@ def rodar_transacoes():
             continue
 
         remetente = random.choice(usuarios_ativos)
-
+        
         nova_tx = Transaction(remetente_id=remetente)
 
-        print(f"[TRANSACAO] Usuário {remetente} enviou R$ {nova_tx.amount}")
+        dados = nova_tx.para_dict()
 
+        print(f"[TRANSACAO] Usuário {remetente} enviou R$ {nova_tx.amount}")
+        print(f"{dados}")
         time.sleep(2)
 
 if __name__ == "__main__":
