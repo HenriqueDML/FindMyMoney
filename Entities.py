@@ -5,7 +5,7 @@ import random
 
 fake = Faker('pt_BR')
 
-class User():
+class User:
     def __init__(self):
         self.name = fake.name() 
         self.id = fake.uuid4()
@@ -30,3 +30,9 @@ class Transaction:
         self.timestamp = datetime.now().isoformat()
         self.currency = "BRL"
         self.status = random.choice(["APROVADO"],["NEGADO"])
+
+    def para_dict(self):
+        return {
+            "tipo_evento": "FINANCIAL_TRANSACTION",
+            "payload": self.__dict__ 
+        }
