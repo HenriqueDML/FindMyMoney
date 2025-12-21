@@ -29,4 +29,4 @@ class Transaction:
         self.type = random.choice(["PIX"], ["BOLETO"], ["TED"])
         self.timestamp = datetime.now().isoformat()
         self.currency = "BRL"
-        self.status = random.choice(["APROVADO"],["NEGADO"])
+        self.status = random.choice(["APROVADO"],["NEGADO"],["EM PROCESSAMENTO"])
