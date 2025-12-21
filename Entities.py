@@ -32,10 +32,10 @@ class Transaction:
         #valor
         self.amount = round(random.uniform(1.00, 10000.00), 2)
         #Detalhamento da Transação
-        self.type = random.choice(["PIX"], ["BOLETO"], ["TED"])
+        self.type = random.choice(["PIX", "BOLETO", "TED"])
         self.timestamp = datetime.now().isoformat()
         self.currency = "BRL"
-        self.status = random.choice(["APROVADO"],["NEGADO"],["EM PROCESSAMENTO"])
+        self.status = random.choice(["APROVADO","NEGADO","EM PROCESSAMENTO"])
         #Pendente ADICIONAR EMPRESA e destinatario ID
     def para_dict(self):
         return {
