@@ -15,6 +15,12 @@ class User:
         self.estate = fake.city()
         self.city =  fake.estado_nome()
         self.RegisterDate = fake.iso8601()
+    
+    def para_dict(self):
+        return {
+            "tipo_evento": "user_register",
+            "payload": self.__dict__ 
+        }
 
 class Transaction:
     def __init__(self, remetente_id, destinatario_id):
