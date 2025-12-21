@@ -1,10 +1,13 @@
+from faker import Faker
+import random
+fake = Faker('pt_BR')
 class User():
-    def __init__(self, name, id, birth, income, email, ZipCode, RegisterDate):
-        self.name = name
-        self.id = id
-        self.birth = birth
-        self.income = income
-        self.email = email
-        self.ZipCode = ZipCode
-        self.RegisterDate = RegisterDate
-
+    def __init__(self):
+        self.name = fake.name() 
+        self.id = fake.uuid4()
+        self.birth = fake.date_of_birth(minimum_age=18, maximum_age=100)
+        self.income = fake.name() #arrumar
+        self.email = fake.free_email()
+        self.estate = fake.city()
+        self.city =  fake.estado_nome()
+        self.RegisterDate = fake.iso8601()
