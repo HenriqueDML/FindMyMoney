@@ -5,11 +5,12 @@ from faker.providers import internet
 
 fake = Faker('PT-BR')
 
+id_user = fake.uuid4()
 nome = fake.name()
 address = fake.address()
 provedor = fake.add_provider(internet)
 
-
+print(id_user)
 print(nome)
 print(address)
 print(provedor)
