@@ -1,6 +1,6 @@
 import time
 import random
-from Entities import Transaction
+from backend.app.backend.app.entities.Entities import Transaction
 
 #simulacao de usuarios fakes (MUDAR DEPOIS)
 

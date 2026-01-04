@@ -1,6 +1,6 @@
 import time
 import json
-from Entities import User
+from backend.app.backend.app.entities.Entities import User
 
 def rodar_cadastro():
     print("Gerador de Cadastros iniciado...")
