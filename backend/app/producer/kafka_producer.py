@@ -1,5 +1,11 @@
 from kafka import KafkaProducer
 import json
+from datetime import date
+
+def json_serializer(obj):
+    if isinstance(obj, date):
+        return obj.isoformat()
+    raise TypeError(f'Tipo {type(obj)} não serializável')
 
 # Configuração do Kafka
 producer = KafkaProducer(
