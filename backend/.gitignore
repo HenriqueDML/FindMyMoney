@@ -1,0 +1,46 @@
+### --- SEGURANÇA (O MAIS IMPORTANTE) ---
+# Jamais subir arquivos de ambiente com senhas reais
+.env
+.venv/
+env/
+venv/
+
+### --- PYTHON ---
+# Arquivos gerados pelo Python (como os que você viu no seu print: __pycache__)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+### --- DOCKER ---
+# Se você criou uma pasta local para salvar os dados do banco (ex: pasta /data)
+# É importante não subir os dados reais para o Git, apenas a estrutura.
+backend/data/
+
+### --- BANCO DE DADOS ---
+*.sql.gz
+*.sql.local
+
+### --- SISTEMA OPERACIONAL ---
+.DS_Store
+Thumbs.db
+
+### --- IDEs (VS Code, PyCharm) ---
+.vscode/
+.idea/
