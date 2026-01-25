@@ -1,4 +1,4 @@
-# Usando Python 3.11
+# Usando Python 3.14
 FROM python:3.14-slim
 
 # Diretório de trabalho no container
